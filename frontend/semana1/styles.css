@@ -1,11 +1,9 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+}/*margem e reset*/
 
-/* Fonte */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
@@ -13,29 +11,25 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-}
+} /*fonte*/
 
-/* Container centralizado */
 .cont {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} /*posição do container*/
 
-/* Cartão com cabeçalho e corpo */
 .caixa {
   width: 465px;
   border-radius: 22px;
-  overflow: hidden; /* Garante cantos arredondados corretos */
+  overflow: hidden; /*garante cantos arredondados corretos*/
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
+} /*estilização da caixa*/
 
-/* Animação no hover */
 .caixa:hover {
   transform: scale(1.05);
-}
+} /*animação*/
 
-/* Cabeçalho */
 .caixa-h {
   background-color: #ff6600;
   height: 64px;
@@ -47,7 +41,7 @@ body {
   align-items: center;
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
-}
+} /*cabeçalho*/
 
 
 .caixa-b {
@@ -59,7 +53,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} /*corpo*/
 
 
 .caixa-b ul {
@@ -68,4 +62,4 @@ body {
   font-weight: 500;
   color: #ffffff;
   line-height: 1.8;
-}
+} /*texto funcionarios*/
