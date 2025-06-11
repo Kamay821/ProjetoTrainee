@@ -1,0 +1,126 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} /*margem e reset*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} /*fonte*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*posição do container*/
+
+.card {
+  width: 465px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}/*estilização da carta*/
+
+.card:hover {
+  transform: scale(1.05);
+}/*animação*/
+
+.card-header {
+  background-color: #ff6600;
+  height: 64px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}/*cabeçalho*/
+
+.card-body {
+  background-color: #001830;
+  padding: 30px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  display: flex;
+  justify-content: center;
+}/*corpo*/
+
+.card-body ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}/*texto funcionarios*/
+
+.card-body li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100px;
+}
+
+.card-body li img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  object-fit: cover;
+  border-radius: 50%;
+}/*imagens*/
+
+/*responsividade para mobile*/
+@media (max-width: 500px) {
+  body {
+    padding: 20px;
+    height: auto;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 16px;
+  }
+
+  .card-header {
+    font-size: 20px;
+    height: 56px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .card-body {
+    padding: 20px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .card-body ul {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card-body li {
+    width: 80px;
+    font-size: 16px;
+  }
+
+  .card-body li img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,71 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Container centralizado */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cartão com cabeçalho e corpo */
+.card {
+  width: 465px;
+  border-radius: 22px;
+  overflow: hidden; /* Garante cantos arredondados corretos */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animação no hover */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Cabeçalho */
+.card-header {
+  background-color: #ff6600;
+  height: 64px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+
+.card-body {
+  background-color: #001830;
+  height: 165px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.card-body ul {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.8;
+}
