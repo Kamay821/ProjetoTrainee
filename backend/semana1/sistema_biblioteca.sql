@@ -1,8 +1,8 @@
--- CRIAR BANCO DE DADOS
+-- sistema de empréstimo de livros
 CREATE DATABASE sistema;
 USE sistema;
 
--- TABELA USUARIO
+-- usuários do sistema (que pegam livros emprestado)
 CREATE TABLE usuario(
 	id_usuario INT auto_increment PRIMARY key,
     nome VARCHAR(100) NOT NULL,
@@ -10,23 +10,24 @@ CREATE TABLE usuario(
     telefone VARCHAR(20)
 );
 
--- TABELA LIVRO
+-- os livros que podem ser emprestados
 CREATE TABLE livro(
 	id_livro INT auto_increment PRIMARY key,
     titulo VARCHAR(100) NOT NULL,
     autor VARCHAR(100),
-    ano_publicacao INT,
+    publicacao INT,
     disponibilidade BOOLEAN DEFAULT TRUE
 );
 
--- TABELA EMPRESTIMO
+-- os emprestimos feitos por clientes
 CREATE TABLE emprestimo(
 	id_emprestimo INT auto_increment PRIMARY key,
     id_usuario INT NOT NULL,
     id_livro INT NOT NULL,
     data_emprestimo DATE NOT NULL,
     data_devolução DATE,
-    status ENUM('em-aberto','devolvido') DEFAULT 'em_aberto',
+    status ENUM('emprestado','devolvido') DEFAULT 'emprestado',
     FOREIGN key (id_usuario) REFERENCES usuario(id_usuario) ON DELETE cascade,
     FOREIGN key (id_livro) REFERENCES livro(id_livro) ON DELETE cascade
+-- o on delete cascade faz com que se o livro ou usuário for excluído, o emprestimo some junto
 );
