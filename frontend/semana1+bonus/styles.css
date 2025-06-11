@@ -14,13 +14,13 @@ body {
   height: 100vh;
 } /*fonte*/
 
-.container {
+.cont {
   display: flex;
   justify-content: center;
   align-items: center;
 }/*posição do container*/
 
-.card {
+.caixa {
   width: 465px;
   border-radius: 22px;
   overflow: hidden;
@@ -28,11 +28,11 @@ body {
   transition: transform 0.3s ease;
 }/*estilização da carta*/
 
-.card:hover {
+.caixa:hover {
   transform: scale(1.05);
 }/*animação*/
 
-.card-header {
+.caixa-h {
   background-color: #ff6600;
   height: 64px;
   color: #fff;
@@ -45,7 +45,7 @@ body {
   border-top-right-radius: 22px;
 }/*cabeçalho*/
 
-.card-body {
+.caixa-b {
   background-color: #001830;
   padding: 30px;
   border-bottom-left-radius: 22px;
@@ -54,7 +54,7 @@ body {
   justify-content: center;
 }/*corpo*/
 
-.card-body ul {
+.caixa-b ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +63,7 @@ body {
   width: 100%;
 }/*texto funcionarios*/
 
-.card-body li {
+.caixa-b li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,7 +74,7 @@ body {
   width: 100px;
 }
 
-.card-body li img {
+.caixa-b li img {
   width: 48px;
   height: 48px;
   margin-bottom: 8px;
@@ -89,37 +89,37 @@ body {
     height: auto;
   }
 
-  .card {
+  .caixa {
     width: 100%;
     max-width: 100%;
     box-shadow: none;
     border-radius: 16px;
   }
 
-  .card-header {
+  .caixa-h {
     font-size: 20px;
     height: 56px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
   }
 
-  .card-body {
+  .caixa-b {
     padding: 20px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
   }
 
-  .card-body ul {
+  .caixa-b ul {
     gap: 20px;
     justify-content: center;
   }
 
-  .card-body li {
+  .caixa-b li {
     width: 80px;
     font-size: 16px;
   }
 
-  .card-body li img {
+  .caixa-b li img {
     width: 40px;
     height: 40px;
   }

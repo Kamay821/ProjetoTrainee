@@ -16,14 +16,14 @@ body {
 }
 
 /* Container centralizado */
-.container {
+.cont {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* Cartão com cabeçalho e corpo */
-.card {
+.caixa {
   width: 465px;
   border-radius: 22px;
   overflow: hidden; /* Garante cantos arredondados corretos */
@@ -31,12 +31,12 @@ body {
 }
 
 /* Animação no hover */
-.card:hover {
+.caixa:hover {
   transform: scale(1.05);
 }
 
 /* Cabeçalho */
-.card-header {
+.caixa-h {
   background-color: #ff6600;
   height: 64px;
   color: #fff;
@@ -50,7 +50,7 @@ body {
 }
 
 
-.card-body {
+.caixa-b {
   background-color: #001830;
   height: 165px;
   border-bottom-left-radius: 22px;
@@ -62,7 +62,7 @@ body {
 }
 
 
-.card-body ul {
+.caixa-b ul {
   list-style: none;
   font-size: 20px;
   font-weight: 500;
