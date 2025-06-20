@@ -1,0 +1,31 @@
+{
+  "name": "trainee",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --experimental-strip-types --watch --no-warnings src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serra-Jr-Engenharia/Treinamento2025-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Serra-Jr-Engenharia/Treinamento2025-1/issues"
+  },
+  "homepage": "https://github.com/Serra-Jr-Engenharia/Treinamento2025-1#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^9.5.1",
+    "fastify": "^5.4.0"
+  }
+}
