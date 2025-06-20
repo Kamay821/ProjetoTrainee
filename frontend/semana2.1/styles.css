@@ -77,21 +77,29 @@ body {
 }
 
 #minus {
-  background-color: #c0392b;
+    background-color: #c0392b;
 }
 #minus:hover:not(:disabled) {
-  background-color: #992d22;
+    background-color: #992d22;
 }
 #minus:disabled {
-  background-color: #7f2e25;
-  cursor: not-allowed;
+    background-color: #7f2e25;
+    cursor: not-allowed;
+}
+
+#reset {
+    background-color: #3498db;
+}
+
+#reset:hover {
+    background-color: #2980b9;
 }
 
 /* Responsivo */
 @media (max-width: 500px) {
-  .caixa { width: 100%; }
-  .caixa-b { height: 140px; }
-  .caixa-b #count { font-size: 36px; }
-  .caixa-h { font-size: 20px; height: 56px; }
-  .controls button { font-size: 16px; padding: 10px 20px; }
+    .caixa { width: 100%; }
+    .caixa-b { height: 140px; }
+    .caixa-b #count { font-size: 36px; }
+    .caixa-h { font-size: 20px; height: 56px; }
+    .controls button { font-size: 16px; padding: 10px 20px; }
 }

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa {
+    overflow: hidden;
+    width: 763px;
+    border-radius: 22px;
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.caixa:hover {
+    transform: scale(1.02);
+}
+
+.caixa-h {
+    background-color: #ff6600;
+    height: 81px;
+    width: 763px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 24px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.h-logo {
+    position: absolute;
+    right: 24px;
+    width: 52px;
+    height: 51px;
+
+}
+
+.caixa-b {
+    background-color: #001830;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 763px;
+    height: 421px;
+    text-align: center;
+}
+
+.caixa-b label {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: start;
+    position: relative;
+}
+
+.mostrarsenha {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ff6600;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.mostrarsenha:hover {
+    color: #e65a00;
+}
+
+.caixa-b input {
+    height: 48px;
+    width: 668px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 16px;
+    margin-bottom: 24px;
+
+}
+
+.caixa-b input:focus {
+    outline: 2px solid #ff6600;
+}
+
+#btnenviar {
+    width: 228px;
+    height: 58px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btnenviar:hover {
+    background-color: #e65a00;
+
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+        min-height: 100vh;
+  }
+    .caixa {
+        width: 100%;
+        height: auto;
+  }
+    .caixa-h {
+        height: 56px;
+        font-size: 20px;
+  }
+    .h-logo {
+        width: 28px;
+        height: 28px;
+  }
+    .caixa-b {
+        width: 100%;
+        height: auto;
+        padding: 24px;
+        gap: 16px;
+  }
+    .caixa-b input {
+        font-size: 14px;
+        padding: 8px 12px;
+        margin-bottom: 16px;
+  }
+    #btnenviar {
+        width: auto;
+        padding: 10px 24px;
+        font-size: 14px;
+  }
+}

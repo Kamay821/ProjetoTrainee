@@ -2,25 +2,32 @@ let count = 0
 const contagem = document.getElementById('count');
 const btnPlus = document.getElementById('plus');
 const btnMinus = document.getElementById('minus');
+const btnReset = document.getElementById('reset');
 
-function Atualizar() {
+function atualizar() {
     contagem.textContent = count;
     btnMinus.disabled = (count <= 0);
 }
 
-function Aumentar() {
+function aumentar() {
     count += 1;
-    Atualizar();
+    atualizar();
 }
 
-function Diminuir() {
+function diminuir() {
     if (count > 0){
         count -= 1;
-        Atualizar();
+        atualizar();
     }
 }
 
-btnPlus.addEventListener('click', Aumentar);
-btnMinus.addEventListener('click', Diminuir);
+function resetar() {
+    count = 0;
+    atualizar();
+}
 
-Atualizar();
+btnPlus.addEventListener('click', aumentar);
+btnMinus.addEventListener('click', diminuir);
+btnReset.addEventListener('click', resetar);
+
+atualizar();
