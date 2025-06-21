@@ -47,7 +47,7 @@ app.put('/sala/:id', async (request, reply) => {
 })
 
 // DELETE /sala/:id → remove sala pelo ID
-app.delete('/salas/:id', async (request, reply) => {
+app.delete('/sala/:id', async (request, reply) => {
   const id = Number((request.params as any).id)
   const index = salas.findIndex(r => r.id === id)
   if (index === -1) {
@@ -56,6 +56,25 @@ app.delete('/salas/:id', async (request, reply) => {
   }
   salas.splice(index, 1)
   reply.code(204)
+})
+
+// PATCH - bônus
+app.patch('/sala/:id', async (request, reply) => {
+  const id = Number((request.params as any).id)
+  const index = salas.findIndex(s => s.id === id)
+  if (index === -1) {
+    reply.code(404)
+    return { error: 'Sala não encontrada!'}
+  }
+
+  const { nome, capacidade, local, descricao } = request.body as Partial<Sala>
+
+  if (nome !== undefined) salas[index].nome = nome
+  if (capacidade !== undefined) salas[index].capacidade = capacidade
+  if (local !== undefined) salas[index].local = local
+  if (descricao !== undefined) salas[index].descricao = descricao
+
+  return salas[index]
 })
 
 // Inicia o servidor na porta 3000, mesma do video da Gabi
