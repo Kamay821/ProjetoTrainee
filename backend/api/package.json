@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node --experimental-strip-types --watch --no-warnings src/server.ts",
+    "dev": "node --experimental-strip-types --watch --no-warnings --env-file .env src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,12 +20,14 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^24.0.3",
+    "prisma": "^6.10.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "@fastify/swagger": "^9.5.1",
+    "@prisma/client": "^6.10.1",
     "fastify": "^5.4.0"
   }
 }
