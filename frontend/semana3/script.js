@@ -34,7 +34,10 @@ function buscarCEP(cepManual) {
       document.getElementById("localidade").textContent = data.localidade || "-";
       document.getElementById("uf").textContent = data.uf || "-";
       document.getElementById("estado").textContent = estadosPorUF[data.uf] || "-";
-
+      
+      const endereco = `${data.logradouro}, ${data.localidade}`;
+      document.getElementById("linkMaps").href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`;
+      
       document.getElementById("resultado").style.display = "block";
       salvarHistorico(data.cep);
       exibirHistorico();
