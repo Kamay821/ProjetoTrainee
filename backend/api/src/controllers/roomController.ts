@@ -27,7 +27,15 @@ export const createRoom = async (req: FastifyRequest, reply: FastifyReply) => {
 
   // uso do Prisma ORM para persistir a nova sala
   const newRoom = await prisma.room.create({ data: { nome, capacidade, local, descricao } })
+  await prisma.log.create({
+    data: {
+      acao: 'criação',
+      roomId: newRoom.id
+    }
+  })
+
   return reply.code(201).send(newRoom)
+
 }
 
 export const updateRoom = async (req: FastifyRequest, reply: FastifyReply) => {
@@ -37,6 +45,12 @@ export const updateRoom = async (req: FastifyRequest, reply: FastifyReply) => {
 
   try {
     const updated = await prisma.room.update({ where: { id }, data: updates })
+    await prisma.log.create({
+      data: {
+        acao: 'edição',
+        roomId: updated.id,
+      },
+    })
     return reply.code(200).send(updated)
   } catch (e) {
     return reply.code(404).send({ error: 'Não achei a sala.' })

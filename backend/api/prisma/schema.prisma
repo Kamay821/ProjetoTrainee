@@ -13,4 +13,13 @@ model Room {
   capacidade Int
   local      String
   descricao  String
+  logs       Log[]
+}
+
+model Log {
+  id        Int      @id @default(autoincrement())
+  acao      String
+  roomId    Int
+  room      Room     @relation(fields: [roomId], references: [id])
+  timestamp DateTime @default(now())
 }
