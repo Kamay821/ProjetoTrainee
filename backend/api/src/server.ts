@@ -1,10 +1,14 @@
 import Fastify from 'fastify'
+import fastifyJwt from '@fastify/jwt'
 import { roomRoutes } from './routes'
 import { prisma } from './lib/prisma'
 import { ZodError } from 'zod'
 
-//Início: Fastify com logs simpáticos
 const app = Fastify({ logger: true })
+
+app.register(fastifyJwt, {
+  secret: process.env.JWT_SECRET || 'super-secret-key',
+})
 
 app.register(roomRoutes)
 

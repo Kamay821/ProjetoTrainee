@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Serra-Jr-Engenharia/Treinamento2025-1#readme",
   "description": "",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^24.0.3",
     "prisma": "^6.10.1",
     "ts-node": "^10.9.2",
@@ -27,9 +28,12 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@fastify/jwt": "^9.1.0",
     "@fastify/swagger": "^9.5.1",
     "@prisma/client": "^6.10.1",
+    "bcryptjs": "^3.0.2",
     "fastify": "^5.4.0",
+    "fastify-jwt": "^4.1.3",
     "zod": "^3.25.73"
   }
 }
