@@ -1,26 +1,8 @@
-import { useLocation, Link } from "react-router-dom";
-
-const pageTitles: Record<string, string> = {
-  "/": "Início",
-  "/add": "Adicionar Jogo",
-};
-
-export default function Header() {
-  const location = useLocation();
-  const title = pageTitles[location.pathname] || "Página";
-
+export function Header() {
   return (
-    <header className="bg-blue-600 text-white p-4 shadow">
-      <div className="flex justify-between items-center max-w-4xl mx-auto">
-        <h1 className="text-xl font-bold">{title}</h1>
-        <nav className="space-x-4">
-          <Link to="/" className="hover:underline">
-            Início
-          </Link>
-          <Link to="/add" className="hover:underline">
-            Adicionar
-          </Link>
-        </nav>
+    <header className="bg-black/90 text-white p-4 shadow">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-xl font-bold">Backlog de Jogos</h1>
       </div>
     </header>
   );

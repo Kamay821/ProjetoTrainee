@@ -1,6 +1,10 @@
-import { clsx, type ClassValue } from "clsx"
+import { clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
-export function cn(...inputs: ClassValue[]) {
+/**
+ * Utilitário para juntar classes condicionalmente e evitar conflitos com Tailwind.
+ * Exemplo: `cn("p-4", isDark && "bg-black")`
+ */
+export function cn(...inputs: any[]) {
   return twMerge(clsx(inputs))
 }
