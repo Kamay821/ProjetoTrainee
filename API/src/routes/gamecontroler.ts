@@ -60,12 +60,13 @@ export const gamecontroller: FastifyPluginAsync = async (app) => {
     }
   });
 
-  // Buscar por título e/ou status
+  // Busca por title/status/genre
   app.get('/Games/search', {
     schema: {
       querystring: z.object({
         title: z.string().optional(),
         status: gameStatus.optional(),
+        genre: z.string().optional(),
       }),
       response: {
         200: z.array(gameSchema),
@@ -74,13 +75,14 @@ export const gamecontroller: FastifyPluginAsync = async (app) => {
     },
   }, async (request, reply) => {
     try {
-      const { title, status } = request.query as z.infer<typeof gameSchema>;
+      const { title, status, genre } = request.query;
 
       const games = await prisma.game.findMany({
         where: {
           AND: [
             title ? { title: { contains: title } } : {},
             status ? { status } : {},
+            genre ? { genre: { contains: genre } } : {},
           ],
         },
       });
